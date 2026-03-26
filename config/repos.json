@@ -1,0 +1,45 @@
+{
+  "_comment": "Paths are relative to DATA_ROOT env variable (default: C:/dev for local dev, /data for Docker).",
+  "projects": [
+    {
+      "id": "iqsuite-clerk",
+      "name": "iQSuite-Clerk_React",
+      "displayName": "iQSuite Clerk (React)",
+      "description": "Frontend React application – Clerk integration",
+      "testing": {
+        "enabled": true,
+        "globalStatsPath": "test-platform-framework/GLOBAL_STATS.json",
+        "logsDir":         "test-platform-framework/tracking",
+        "reportsDir":      "test-platform-framework/tracking"
+      },
+      "refactoring": {
+        "enabled": true,
+        "globalStatsPath": "Sonarqube-Autofix/GLOBAL_STATS.json",
+        "logsDir":         "Sonarqube-Autofix/logs",
+        "reportsDir":      "Sonarqube-Autofix/reports"
+      }
+    },
+    {
+      "id": "iqsuite-code",
+      "name": "iqsuite-code",
+      "displayName": "iQSuite Core",
+      "description": "Backend core services & API layer",
+      "testing": {
+        "enabled": true,
+        "globalStatsPath": "test-platform-framework/GLOBAL_STATS.json",
+        "logsDir":         "test-platform-framework/tracking",
+        "reportsDir":      "test-platform-framework/tracking"
+      },
+      "refactoring": {
+        "enabled": true,
+        "globalStatsPath": "Sonarqube-Autofix/GLOBAL_STATS.json",
+        "logsDir":         "Sonarqube-Autofix/logs",
+        "reportsDir":      "Sonarqube-Autofix/reports"
+      }
+    }
+  ],
+  "timeSavings": {
+    "minutesPerManualTest": 30,
+    "minutesPerManualFix":  20
+  }
+}

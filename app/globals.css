@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sora (Display/Headings) + Manrope (Body) — Mnemorya font stack */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ── Base reset ────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #09090f;
+  color: #F0F4FA;
+  font-family: 'Manrope', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Scrollbar — minimal, Antigravity style ────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #1c1f2e; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #242738; }
+
+/* ── Selection ──────────────────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(249, 115, 22, 0.25);
+  color: #F0F4FA;
+}
+
+/* ── Focus ring — orange brand ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(249, 115, 22, 0.5);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ── Tailwind component layer overrides ──────────────────────────────────────── */
+@layer components {
+  /* Tabular numbers for all KPI values */
+  .kpi-num { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+}
