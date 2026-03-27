@@ -1,7 +1,7 @@
 import TopBar from '@/components/layout/TopBar'
 import { getProjects, getRefactoringStats, getTestingStats } from '@/lib/data-reader'
 import { formatMinutes, formatRelativeTime } from '@/lib/utils'
-import { getServerTranslations } from '@/lib/i18n'
+import { getServerTranslations } from '@/lib/i18n/server'
 import { s } from '@/lib/styles'
 import { cn } from '@/lib/utils'
 import { FadeIn, PageTransition, SpringPressable } from '@/lib/motion'
